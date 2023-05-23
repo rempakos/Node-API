@@ -108,7 +108,23 @@ app.delete('/events/:id', async(req,res) =>{
 /**
  * Connect to MongoDB
  */
-mongoose.set("strictQuery", false)
+mongoose.set("strictQuery", false);
+const connectDB = async ()=> {
+    try {
+        const conn = await mongoose.connect('mongodb+srv://rempakos:kappa@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority');
+        console.log('MongoDB Connected: ${conn.connection.host}');
+    } catch (error) {
+        console.log(error);
+        process.exit(1);
+    }
+}
+
+connectDB().then(() => {
+    app.listen(3000, () => {
+        console.log('Listening on port ${PORT}');
+    })
+})
+/* 
 mongoose.connect('mongodb+srv://rempakos:kappa@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority')
 .then(()=>{
 
@@ -122,4 +138,4 @@ mongoose.connect('mongodb+srv://rempakos:kappa@eventplannerapi.bv02rpj.mongodb.n
 
 }).catch((error) => {
     console.log(error)
-})
+})*/
