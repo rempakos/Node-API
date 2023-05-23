@@ -1,28 +1,35 @@
-**# skg-bookingapp-kotlin**
-This is an Android application developed in Kotlin that allows users to search, view, and book various events. The app provides a user-friendly interface that enables users to easily find and book events based on their preferences.
+
+**# Node-API**
+
+# nodejs-mongodb-crud-api
+This is a RESTful CRUD API developed with Node.js, MongoDB, Express, and Mongoose. The API provides endpoints for creating, reading, updating, and deleting data in a MongoDB database. It follows the principles of Representational State Transfer (REST) and allows clients to interact with the server using standard HTTP methods.
 
 **Features**
-* User registration and login
-* Search for events by location, category, date, and keyword
-* View event details, including description, location, date and time, price, and availability
-* Book events by selecting the desired ticket type and quantity
-* View upcoming and past bookings
-* Cancel bookings if necessary
-* Integration with payment gateway for secure transactions
-* User profile management
 
-**Technologies Used**
-* Kotlin programming language
-* Android SDK
+Create new records in the database
+Retrieve records based on specified criteria
+Update existing records in the database
+Delete records from the database
+Technologies Used
 
+Node.js: A JavaScript runtime for server-side development
+MongoDB: A NoSQL database for storing data
+Express: A web application framework for Node.js
+Mongoose: An Object Data Modeling (ODM) library for MongoDB and Node.js
+Getting Started
+To use this API, you will need to have Node.js and MongoDB installed on your computer. Clone the repository and navigate to the project directory. Install the dependencies by running **npm install**. Make sure your MongoDB server is running. You can configure the database connection in the project's configuration file. Once everything is set up, start the API by running npm start or node app.js.
 
-**Getting Started**
-To use this app, you will need to have Android Studio installed on your computer. Clone the repository and open the project in Android Studio. Build and run the project on an Android emulator or physical device.
+**Endpoints**
+The API exposes the following endpoints:
+
+GET /api/records - Retrieve all records
+GET /api/records/:id - Retrieve a specific record by ID
+POST /api/records - Create a new record
+PUT /api/records/:id - Update a specific record by ID
+DELETE /api/records/:id - Delete a specific record by ID
 
 **Contribution**
-The main contributors of this project are the people that are taking part in the SKG seminar program through the course of May-June 2023.
-This is not a project meant to attract other contributors...
-Please fork the repository and make a pull request with your changes.
+Contributions to this project are welcome. Please fork the repository and make a pull request with your changes.
 
 **License**
-_Null_
+This project is released under the MIT License.
