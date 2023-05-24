@@ -52,7 +52,9 @@ Once everything is set up, start the API by running: **npm run serve** or npm ru
 From then on you should be able to see your webdatabase hosted locally on port 3000!<br>
 
 ![Image Description](tutorial_images/tutorial_3.png)<br>
+
 ![Image Description](tutorial_images/tutorial_4.png)<br>
+
 ![Image Description](tutorial_images/tutorial_5.png)<br>
 
 
