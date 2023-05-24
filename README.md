@@ -51,5 +51,7 @@ Thats it your server should be up and running in your local host on port 3000!<b
 ![tutorial_5](https://github.com/rempakos/Node-API/assets/44623491/a95899e3-bf12-4326-9891-63a059dd0162)
 
 You can test the functionality of your crud operations in software such as insomnia as seen below.
+![tutorial_6](https://github.com/rempakos/Node-API/assets/44623491/8edfbed7-e785-422c-8849-5c8a48e64c7e)
+
 
 # Done!
