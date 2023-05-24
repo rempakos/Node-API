@@ -39,10 +39,11 @@ This project is released under the MIT License.
 # Getting Started
 To use this API, you will need to have Node.js , mongoose & express dependencies installed on your computer.In addition you must have a mongo database configured.Follow the steps below to set up and run the API:
 
-i)Clone the repository to your local machine.
-ii)Navigate to the project directory.
-iii)Install the dependencies by running the command **npm install express** , **npm install mongoose** & **npm install dotenv**
-
+i)Clone the repository to your local machine.<br>
+ii)Navigate to the project directory.<br>
+iii)Install the dependencies by running the command **npm install express,mongoose,dotenv**.<br>
+<br>
+<br>
 Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.
 
 From then on you should be able to see your webdatabase hosted locally on port 3000!
