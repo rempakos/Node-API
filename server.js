@@ -125,18 +125,3 @@ connectDB().then(() => {
         console.log('Listening on port ${PORT}');
     })
 })
-/* 
-mongoose.connect('mongodb+srv://rempakos:kappa@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority')
-.then(()=>{
-
-    console.log('Connected to MongoDB')
-
-    //Server Start
-    app.listen(3000, ()=>{
-        console.log('Node API app is running on port 3000')
-    })
-
-
-}).catch((error) => {
-    console.log(error)
-})*/
