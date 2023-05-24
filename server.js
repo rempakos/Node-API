@@ -29,18 +29,7 @@ app.get('/',(req, res) => {
     res.send('Hello NODE API!')
 } )
 
-/**
- * GET, all events.
 
-app.get('/events', async(req,res)=> {
-    try {
-        const events = await Event.find({});
-        res.status(200).json(events)
-    } catch (error) {
-        res.status(500).json({message:error.message})
-    }
-})
- */
 /**
  * GET,  events by an id.
  */
@@ -54,23 +43,11 @@ app.get('/events/:id', async(req,res) =>{
     }
 })
 
+
 /**
  * GET events and filter.
  * Filter events.
- 
-app.get('/events', async(req,res)=> {
-    try {
-        const filters = req.query;
-        const events = await Event.find(filters);
-        res.status(200).json(events)
-    } catch (error) {
-        res.status(500).json({message:error.message})
-    }
-})
-*/
-/**
- * GET events and filter.
- * Filter events.
+ * Includes a min-max price filter
  */
 app.get('/events', async (req, res) => {
     try {
