@@ -41,12 +41,18 @@ To use this API, you will need to have Node.js , mongoose & express dependencies
 
 i)Clone the repository to your local machine.<br>
 ii)Navigate to the project directory.<br>
-iii)Install the dependencies by running the command **npm install express,mongoose,dotenv**.<br>
-<br>
-<br>
-Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.
+iii)Install the dependencies by running the command **npm install mongoose,mongoose,dotenv**.<br>
+![Image Description](tutorial_images/tutorial_2.png)
 
+<br>
+<br>
+Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.<br>
+![Image Description](tutorial_images/tutorial_1.png)
 From then on you should be able to see your webdatabase hosted locally on port 3000!<br>
+![Image Description](tutorial_images/tutorial_3.png)<br>
+![Image Description](tutorial_images/tutorial_4.png)<br>
+![Image Description](tutorial_images/tutorial_5.png)<br>
+
 
 **You can test your database's CRUD operation, using software such as Insomnia or Postman as seen below**<br>
 
