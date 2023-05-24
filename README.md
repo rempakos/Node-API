@@ -48,7 +48,9 @@ iii)Install the dependencies by running the command **npm install mongoose,mongo
 <br>
 Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.<br>
 ![Image Description](tutorial_images/tutorial_1.png)
+
 From then on you should be able to see your webdatabase hosted locally on port 3000!<br>
+
 ![Image Description](tutorial_images/tutorial_3.png)<br>
 ![Image Description](tutorial_images/tutorial_4.png)<br>
 ![Image Description](tutorial_images/tutorial_5.png)<br>
