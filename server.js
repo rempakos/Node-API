@@ -31,7 +31,7 @@ app.get('/',(req, res) => {
 
 /**
  * GET, all events.
- */
+
 app.get('/events', async(req,res)=> {
     try {
         const events = await Event.find({});
@@ -40,7 +40,7 @@ app.get('/events', async(req,res)=> {
         res.status(500).json({message:error.message})
     }
 })
-
+ */
 /**
  * GET,  events by an id.
  */
@@ -51,6 +51,20 @@ app.get('/events/:id', async(req,res) =>{
         res.status(200).json(event)
     }catch(error){
         res.status(500).json({error: error.message})
+    }
+})
+
+/**
+ * GET events and filter.
+ * Filter events.
+ */
+app.get('/events', async(req,res)=> {
+    try {
+        const filters = req.query;
+        const events = await Event.find(filters);
+        res.status(200).json(events)
+    } catch (error) {
+        res.status(500).json({message:error.message})
     }
 })
 
