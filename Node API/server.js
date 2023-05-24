@@ -109,7 +109,7 @@ app.delete('/events/:id', async(req,res) =>{
  * Connect to MongoDB
  */
 mongoose.set("strictQuery", false)
-mongoose.connect('mongodb+srv://rempakos:kappa@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://<username>:<pass>@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority')
 .then(()=>{
 
     console.log('Connected to MongoDB')
