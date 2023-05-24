@@ -46,6 +46,10 @@ const eventSchema = mongoose.Schema(
       type: String,
       required: [true, 'Please enter a detailedDescription'],
     },
+    location: {
+      type: String,
+      required: [true, 'Please enter a location'],
+    },
   },
   {
     timestamps: true, // Includes created at and updated at information
