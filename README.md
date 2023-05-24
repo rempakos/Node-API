@@ -60,3 +60,6 @@ From then on you should be able to see your webdatabase hosted locally on port 3
 
 **You can test your database's CRUD operation, using software such as Insomnia or Postman as seen below**<br>
 
+![tutorial_6](https://github.com/rempakos/Node-API/assets/44623491/426177de-6685-49ed-b2db-05aec60ab26c)
+
+
