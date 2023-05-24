@@ -46,5 +46,7 @@ iii)Install the dependencies by running the command **npm install express,mongoo
 <br>
 Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.
 
-From then on you should be able to see your webdatabase hosted locally on port 3000!
+From then on you should be able to see your webdatabase hosted locally on port 3000!<br>
+
+**You can test your database's CRUD operation, using software such as Insomnia or Postman as seen below**<br>
 
