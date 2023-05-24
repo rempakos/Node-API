@@ -112,7 +112,7 @@ app.delete('/events/:id', async(req,res) =>{
 mongoose.set("strictQuery", false);
 const connectDB = async ()=> {
     try {
-        const conn = await mongoose.connect('mongodb+srv://rempakos:kappa@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority');
+        const conn = await mongoose.connect('mongodb+srv://<name>:<pass>@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority');
         console.log('MongoDB Connected: ${conn.connection.host}');
     } catch (error) {
         console.log(error);
