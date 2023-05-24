@@ -22,11 +22,11 @@ To use this API, you will need to have Node.js and MongoDB installed on your com
 **Endpoints**
 The API exposes the following endpoints:
 
-GET /api/records - Retrieve all records<br>
-GET /api/records/:id - Retrieve a specific record by ID<br>
-POST /api/records - Create a new record<br>
-PUT /api/records/:id - Update a specific record by ID<br>
-DELETE /api/records/:id - Delete a specific record by ID<br>
+**GET /api/records** - Retrieve all records<br>
+**GET /api/records/:id **- Retrieve a specific record by ID<br>
+**POST /api/records **- Create a new record<br>
+**PUT /api/records/:id **- Update a specific record by ID<br>
+**DELETE /api/records/:id** - Delete a specific record by ID<br>
 
 **Contribution**
 Contributions to this project are welcome. Please fork the repository and make a pull request with your changes.
@@ -39,14 +39,14 @@ This project is released under the MIT License.
 # Getting Started
 To use this API, you will need to have Node.js , mongoose & express dependencies installed on your computer.In addition you must have a mongo database configured.Follow the steps below to set up and run the API:
 
-i)Clone the repository to your local machine.<br>
-ii)Navigate to the project directory.<br>
-iii)Install the dependencies by running the command **npm install mongoose,mongoose,dotenv**.<br>
+**i)Clone the repository to your local machine.<br>**
+**ii)Navigate to the project directory.<br>**
+**iii)Install the dependencies by running the command **npm install mongoose,mongoose,dotenv**.<br>**
 ![tutorial_2](https://github.com/rempakos/Node-API/assets/44623491/fe4c8400-b57a-4db2-b02d-b4c40e225ff1)
 
 <br>
 <br>
-Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.<br>
+**Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.<br>**
 
 ![tutorial_1](https://github.com/rempakos/Node-API/assets/44623491/89877d0c-1989-440b-a524-81f12bbe42a2)
 
