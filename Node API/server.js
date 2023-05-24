@@ -1,6 +1,7 @@
 /**
  * Import dependencies.
  */
+require('dotenv').config();
 const express = require('express')
 const mongoose = require('mongoose')
 
@@ -108,18 +109,19 @@ app.delete('/events/:id', async(req,res) =>{
 /**
  * Connect to MongoDB
  */
-mongoose.set("strictQuery", false)
-mongoose.connect('mongodb+srv://<username>:<pass>@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority')
-.then(()=>{
+mongoose.set("strictQuery", false);
+const connectDB = async ()=> {
+    try {
+        const conn = await mongoose.connect('mongodb+srv://<name>:<pass>@eventplannerapi.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority');
+        console.log('MongoDB Connected: ${conn.connection.host}');
+    } catch (error) {
+        console.log(error);
+        process.exit(1);
+    }
+}
 
-    console.log('Connected to MongoDB')
-
-    //Server Start
-    app.listen(3000, ()=>{
-        console.log('Node API app is running on port 3000')
+connectDB().then(() => {
+    app.listen(3000, () => {
+        console.log('Listening on port ${PORT}');
     })
-
-
-}).catch((error) => {
-    console.log(error)
 })
