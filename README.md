@@ -42,20 +42,21 @@ To use this API, you will need to have Node.js , mongoose & express dependencies
 i)Clone the repository to your local machine.<br>
 ii)Navigate to the project directory.<br>
 iii)Install the dependencies by running the command **npm install mongoose,mongoose,dotenv**.<br>
-![Image Description](tutorial_images/tutorial_2.png)
+![tutorial_2](https://github.com/rempakos/Node-API/assets/44623491/fe4c8400-b57a-4db2-b02d-b4c40e225ff1)
 
 <br>
 <br>
 Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.<br>
-![Image Description](tutorial_images/tutorial_1.png)
+![tutorial_1](https://github.com/rempakos/Node-API/assets/44623491/89877d0c-1989-440b-a524-81f12bbe42a2)
 
 From then on you should be able to see your webdatabase hosted locally on port 3000!<br>
 
-![Image Description](tutorial_images/tutorial_3.png)<br>
+![tutorial_3](https://github.com/rempakos/Node-API/assets/44623491/a7a7265a-e3ee-4a8d-95df-3f141fc07c13)<br>
 
-![Image Description](tutorial_images/tutorial_4.png)<br>
+![tutorial_4](https://github.com/rempakos/Node-API/assets/44623491/5a50cd68-10bd-4755-ad30-7af33241ad18)<br>
 
-![Image Description](tutorial_images/tutorial_5.png)<br>
+![tutorial_5](https://github.com/rempakos/Node-API/assets/44623491/ace7b1c6-ba59-4e9f-8f29-b0454d917bea)
+<br>
 
 
 **You can test your database's CRUD operation, using software such as Insomnia or Postman as seen below**<br>
