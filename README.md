@@ -1,5 +1,5 @@
 
-**# Node-API**
+# Node-API
 
 # nodejs-mongodb-crud-api
 This is a RESTful CRUD API developed with Node.js, MongoDB, Express, and Mongoose. The API provides endpoints for creating, reading, updating, and deleting data in a MongoDB database. It follows the principles of Representational State Transfer (REST) and allows clients to interact with the server using standard HTTP methods.
@@ -33,3 +33,17 @@ Contributions to this project are welcome. Please fork the repository and make a
 
 **License**
 This project is released under the MIT License.
+
+
+
+# Getting Started
+To use this API, you will need to have Node.js , mongoose & express dependencies installed on your computer.In addition you must have a mongo database configured.Follow the steps below to set up and run the API:
+
+i)Clone the repository to your local machine.
+ii)Navigate to the project directory.
+iii)Install the dependencies by running the command **npm install express** , **npm install mongoose** & **npm install dotenv**
+
+Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.
+
+From then on you should be able to see your webdatabase hosted locally on port 3000!
+
