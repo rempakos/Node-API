@@ -32,36 +32,6 @@ DELETE /api/records/:id - Delete a specific record by ID<br>
 Contributions to this project are welcome. Please fork the repository and make a pull request with your changes.
 
 **License**
-This project is released under the MIT License.
-
-
-
-# Getting Started
-To use this API, you will need to have Node.js , mongoose & express dependencies installed on your computer.In addition you must have a mongo database configured.Follow the steps below to set up and run the API:
-
-**i)Clone the repository to your local machine.<br>**
-**ii)Navigate to the project directory.<br>**
-**iii)Install the dependencies by running the command **npm install mongoose,mongoose,dotenv**.<br>**
-![tutorial_2](https://github.com/rempakos/Node-API/assets/44623491/fe4c8400-b57a-4db2-b02d-b4c40e225ff1)
-
-<br>
-<br>
-**Once everything is set up, start the API by running: **npm run serve** or npm run dev if you have cross-env installed.**(MAKE SURE TO CHANGE THE URL TO YOUR CORRESPONDING API KEY FROM MONGODB IN NODE API/server.js)<br>**
-
-![tutorial_1](https://github.com/rempakos/Node-API/assets/44623491/89877d0c-1989-440b-a524-81f12bbe42a2)
-
-From then on you should be able to see your webdatabase hosted locally on port 3000!<br>
-
-![tutorial_3](https://github.com/rempakos/Node-API/assets/44623491/a7a7265a-e3ee-4a8d-95df-3f141fc07c13)<br>
-
-![tutorial_4](https://github.com/rempakos/Node-API/assets/44623491/5a50cd68-10bd-4755-ad30-7af33241ad18)<br>
-
-![tutorial_5](https://github.com/rempakos/Node-API/assets/44623491/ace7b1c6-ba59-4e9f-8f29-b0454d917bea)
-<br>
-
-
-**You can test your database's CRUD operation, using software such as Insomnia or Postman as seen below**<br>
-
-![tutorial_6](https://github.com/rempakos/Node-API/assets/44623491/426177de-6685-49ed-b2db-05aec60ab26c)
+_Null_
 
 # Done!
