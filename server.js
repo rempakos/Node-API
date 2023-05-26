@@ -57,13 +57,14 @@ app.get('/events', async (req, res) => {
       const searchQuery = {};
   
       if (fullTextSearch) {
+        const regexQuery = { $regex: '.*' + fullTextSearch + '.*', $options: 'i' };
         searchQuery.$or = [
-          { name: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
-          { description: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
-          { detailedDescription: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
-          { eventCategory: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
-          { location: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
-          {date: {$regex: '.*' + fullTextSearch + '.*', $options: 'i' }},
+          { name: regexQuery },
+          { description: regexQuery },
+          { detailedDescription: regexQuery },
+          { eventCategory: regexQuery },
+          { location: regexQuery },
+          { date: regexQuery },
         ];
       }
   
@@ -86,12 +87,14 @@ app.get('/events', async (req, res) => {
         query.$and = [searchQuery];
       }
   
-      const events = await Event.find(query);
+      const projection = { name: 1, description: 1, location: 1 }; // Projection object to include only desired fields
+  
+      const events = await Event.find(query, projection);
       res.status(200).json(events);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
-  });
+  });``````
   
 /**
  * UPDATE, an event by id.
