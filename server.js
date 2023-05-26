@@ -52,21 +52,38 @@ app.get('/events/:id', async(req,res) =>{
 app.get('/events', async (req, res) => {
     try {
       const filters = req.query;
-      const { minPrice, maxPrice, ...otherFilters } = filters;
+      const { fullTextSearch, minPrice, maxPrice, ...otherFilters } = filters;
+  
+      const searchQuery = {};
+  
+      if (fullTextSearch) {
+        searchQuery.$or = [
+          { name: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
+          { description: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
+          { detailedDescription: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
+          { eventCategory: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
+          { location: { $regex: '.*' + fullTextSearch + '.*', $options: 'i' } },
+          {date: {$regex: '.*' + fullTextSearch + '.*', $options: 'i' }},
+        ];
+      }
   
       const priceFilter = {};
-      //if minPrice || maxPrice is defined then check that priceFilter is gte || lte that.
+  
       if (minPrice !== undefined) {
         priceFilter.$gte = Number(minPrice);
       }
       if (maxPrice !== undefined) {
         priceFilter.$lte = Number(maxPrice);
       }
-      //any other possible filter
+  
       const query = { ...otherFilters };
-      //apply price filter to eventPrice field of event items
+  
       if (Object.keys(priceFilter).length > 0) {
         query.eventPrice = priceFilter;
+      }
+  
+      if (Object.keys(searchQuery).length > 0) {
+        query.$and = [searchQuery];
       }
   
       const events = await Event.find(query);
@@ -75,6 +92,7 @@ app.get('/events', async (req, res) => {
       res.status(500).json({ message: error.message });
     }
   });
+  
 /**
  * UPDATE, an event by id.
  */
