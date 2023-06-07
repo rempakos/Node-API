@@ -48,7 +48,9 @@ exports.getEvents = async (req, res) => {
     if (searchText) {
       query.$or = [
         { $text: { $search: searchText } },
-        { description: { $regex: `.*${searchText}.*`, $options: 'i' } }
+        { detailedDescription: { $regex: `.*${searchText}.*`, $options: 'i' } },
+        { location: { $regex: `.*${searchText}.*`, $options: 'i' } },
+        { eventCategory: { $regex: `.*${searchText}.*`, $options: 'i' } }
       ];
     }
 
