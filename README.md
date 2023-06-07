@@ -22,11 +22,13 @@ To use this API, you will need to have Node.js and MongoDB installed on your com
 **Endpoints**
 The API exposes the following endpoints:
 
-GET /api/records - Retrieve all records<br>
-GET /api/records/:id - Retrieve a specific record by ID<br>
-POST /api/records - Create a new record<br>
-PUT /api/records/:id - Update a specific record by ID<br>
-DELETE /api/records/:id - Delete a specific record by ID<br>
+GET /events - Retrieve all events and filter
+GET /events/:id - Retrieve an event by ID
+POST /events - Create a new event
+PUT /events/:id - Update an event by ID
+DELETE /events/:id - Delete an event by ID
+DELETE /events - Delete multiple events based on filters
+PUT /events - Update multiple events based on filters
 
 **Contribution**
 Contributions to this project are welcome. Please fork the repository and make a pull request with your changes.
