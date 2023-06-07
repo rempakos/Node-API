@@ -1,13 +1,11 @@
 /**
  * Module dependencies.
  */
-
 const mongoose = require('mongoose');
 
 /**
  * Event schema.
  */
-
 const eventSchema = mongoose.Schema(
   {
     name: {
@@ -59,11 +57,9 @@ const eventSchema = mongoose.Schema(
 /**
  * Event model.
  */
-
 const Event = mongoose.model('Event', eventSchema);
 
 /**
  * Export the Event model.
  */
-
 module.exports = Event;
