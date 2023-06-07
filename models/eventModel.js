@@ -33,6 +33,7 @@ const eventSchema = mongoose.Schema(
     eventCategory: {
       type: String,
       required: [true, 'Please enter an eventCategory'],
+      index: true,
     },
     totalTickets: {
       type: Number,
@@ -45,10 +46,12 @@ const eventSchema = mongoose.Schema(
     detailedDescription: {
       type: String,
       required: [true, 'Please enter a detailedDescription'],
+      index: true,
     },
     location: {
       type: String,
       required: [true, 'Please enter a location'],
+      index: true,
     },
   },
   {
@@ -56,10 +59,12 @@ const eventSchema = mongoose.Schema(
   }
 );
 
+
 /**
  * Text Index Event model.
  */
-eventSchema.index({ name: 'text', description: 'text' });
+eventSchema.index({ name: 'text', description: 'text', eventCategory: 'text', detailedDescription: 'text', location: 'text' });
+
 
 /**
  * Event model.
