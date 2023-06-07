@@ -11,6 +11,7 @@ const eventSchema = mongoose.Schema(
     name: {
       type: String,
       required: [true, 'Please enter an eventName'],
+      index: true,
     },
     date: {
       type: String,
@@ -19,6 +20,7 @@ const eventSchema = mongoose.Schema(
     description: {
       type: String,
       required: [true, 'Please enter a description'],
+      index: true,
     },
     image: {
       type: String,
@@ -53,6 +55,11 @@ const eventSchema = mongoose.Schema(
     timestamps: true, // Includes created at and updated at information
   }
 );
+
+/**
+ * Text Index Event model.
+ */
+eventSchema.index({ name: 'text', description: 'text' });
 
 /**
  * Event model.

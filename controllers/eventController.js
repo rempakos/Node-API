@@ -8,9 +8,8 @@ const Event = require('../models/eventModel');
  */
 exports.getEvents = async (req, res) => {
   try {
-    // Extract filters from query parameters
-    const filters = req.query;
-    const { minPrice, maxPrice, startDate, endDate, ...otherFilters } = filters;
+    // Extract filters and search query from query parameters
+    const { searchText, minPrice, maxPrice, startDate, endDate, ...otherFilters } = req.query;
 
     // Create price filter
     const priceFilter = {};
@@ -45,6 +44,15 @@ exports.getEvents = async (req, res) => {
       query.date = dateFilter;
     }
 
+    // Add full-text search to the query if searchText is provided
+    if (searchText) {
+      query.$or = [
+        { $text: { $search: searchText } },
+        { description: { $regex: `.*${searchText}.*`, $options: 'i' } }
+      ];
+    }
+
+
     // Find events based on the query
     const events = await Event.find(query);
     res.status(200).json(events);
@@ -52,6 +60,7 @@ exports.getEvents = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
 
 /**
  * GET an event by ID.
