@@ -34,7 +34,7 @@ PUT /events - Update multiple events based on filters<br>
 Contributions to this project are welcome. Please fork the repository and make a pull request with your changes.
 
 **License**
-_Null_
+MIT License
 
 **Getting Started**
 To use this API, you will need to have Node.js installed and your MongoDB must be configured correctly in their website. Follow the steps below to set up and run the API:
