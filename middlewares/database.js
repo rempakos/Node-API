@@ -17,6 +17,13 @@ const connectMongoDB = async () => {
   }
 };
 
+/*
+* const ConnectToOtherDB = async () => {
+  ...
+  ...
+}
+*/
+
 function getMongoURI() {
   return (
     'mongodb+srv://' +
@@ -27,12 +34,7 @@ function getMongoURI() {
     process.env.MONGO_TABLE +
     '.bv02rpj.mongodb.net/EventPlanner-API?retryWrites=true&w=majority'
   );
-  /*
-  * const ConnectToOtherDB = assync () => {
-    ...
-    ...
-  }
-  */
+
 }
 
 module.exports = {
